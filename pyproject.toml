@@ -1,0 +1,17 @@
+[project]
+name = "audiodumper"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["click>=8.1.7", "ffmpeg-python>=0.2.0", "librosa>=0.10.0", "soundfile>=0.12.1"]
+
+[project.scripts]
+audiodumper = "audiodumper.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov", "click"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
